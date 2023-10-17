@@ -1,22 +1,16 @@
 import { Stack, TextField } from '@mui/material'
 
-const NameInputs = () => (
+// eslint-disable-next-line react/prop-types
+const NameInputs = ({ isEmpty }) => (
     <Stack direction={'row'} gap={2}>
         <TextField
-            //error
-            id="first-name-input"
+            error={isEmpty}
+            name="firstname"
             label="Imię"
-            //defaultValue="Imię"
-            //helperText="To pole jest wymagane"
+            helperText={isEmpty ? 'To pole jest wymagane' : ''}
             required
         />
-        <TextField
-            //error
-            id="last-name-input"
-            label="Nazwisko"
-            //defaultValue="Imię"
-            //helperText="To pole jest wymagane"
-        />
+        <TextField name="lastname" label="Nazwisko" />
     </Stack>
 )
 
