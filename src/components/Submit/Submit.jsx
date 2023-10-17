@@ -1,7 +1,8 @@
 import { Button } from '@mui/material'
 
-const Submit = () => (
-    <Button component="submit" variant="contained" disabled>
+// eslint-disable-next-line react/prop-types
+const Submit = ({ disabled }) => (
+    <Button type="submit" variant="contained" disabled={disabled}>
         Wyślij
     </Button>
 )
